@@ -14,7 +14,7 @@ public:
 	void setCircStart(date b);
 	void setCircEnd(date c);
 	void addEmployee(employee d);
-	void removeEmployee(employee e);
+	void removeEmployee();
 	void isArchived();
 
 	//getters
