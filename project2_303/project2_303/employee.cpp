@@ -1,7 +1,7 @@
 #pragma once
 #ifndef EMPLOYEE_HEADER
 #define EMPLOYEE_HEADER
-#include "term.h"
+#include "employee.h"
 
 employee::employee()
 {
