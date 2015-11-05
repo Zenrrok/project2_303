@@ -33,4 +33,8 @@ date employee::getRetainingTime()
 {
 	return retainingTime;
 }
+int employee::getPriority()
+{
+	return (waitingTime - retainingTime);
+}
 #endif
