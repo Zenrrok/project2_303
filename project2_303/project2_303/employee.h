@@ -17,6 +17,7 @@ public:
 	string getName();
 	date getWaitingTime();
 	date getRetainingTime();
+	int getTime();
 
 private:
 	string name;
