@@ -13,7 +13,7 @@ public:
 	void setName(string a);
 	void setCircStart(date b);
 	void setCircEnd(date c);
-	void addEmployee(employee d);
+	void addEmployee(string d);
 	void removeEmployee();
 	void isArchived();
 
