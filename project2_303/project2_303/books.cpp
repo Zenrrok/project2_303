@@ -23,10 +23,11 @@ void book::setCircEnd(date c)
 {
 	circEnd = c;
 }
-void book::addEmployee(employee d)
+void book::addEmployee(string d)
 {
-	//just guessing
-	plannedEmployeeQ.push(d);
+	employee emp1;
+	emp1.setName(d)
+	plannedEmployeeQ.push(emp1);
 }
 void book::RemoveEmployee()
 {
