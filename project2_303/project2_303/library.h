@@ -18,7 +18,7 @@ public:
 private:
 	string title;
 	Date dateToPassBook;
-	List <Book> booksToBeCirc;
-  	List <Book> archivedBooks;
+	list <Book> booksToBeCirc;
+  	list <Book> archivedBooks;
 	
 };
