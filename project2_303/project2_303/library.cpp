@@ -26,7 +26,19 @@ void Library::circulateBook(string t, date c)
 }
 void Library::passOn(string ti, date d)
 {
-
+	/* 
+	If the employee queue in the book object is on the last employee (it's empty after you pop the current employee).
+	The retaining time for the employee gets adjusted to how many days the employee had the book. 
+	Then the employee is popped from the queue.
+	Then the book is placed in the archived book queue and popped from the books to be circulated queue. */
+	
+	/* 
+	If it is not the last employee in the queue.
+	The retaining time for the employee gets adjusted to how many days the employee had the book. 
+	The next employee in the queue (the one the book is being passed to) gets a new waiting time.
+	The waiting time is the retaining time + the waiting time of the previous employee.
+	Then the previous employee is popped from the queue
+	*/
 }
 
 #endif
