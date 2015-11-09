@@ -41,6 +41,15 @@ void Library::passOn(string ti, Date d)
 	Using the circulation start date and the given circulation end date. 
 	The number of days for the retaining time should be calculated.
 	*/
+	for (list<book>::iterator iter = booksToBeCirc.begin(); iter != booksToBeCirc.end(); iter++){
+		if (iter->getName() == ti)
+		{
+			iter->setCircEnd(d);
+			iter->totalDaysRetained();
+
+		}
+	}
+
 	
 	/* 
 	If the employee queue in the book object is on the last employee (it's empty after you pop the current employee).

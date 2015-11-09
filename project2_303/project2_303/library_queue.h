@@ -20,6 +20,8 @@ public:
 			if (max->getPriority() < iter->getPriority()) //finding the Employee with the highest priority
 			{
 				max = iter;
+				iter++;
+				iter->setWaitingTime(max->getRetainingTime() + max->getWaitingTime());
 			}
 		}
 		 
@@ -28,7 +30,7 @@ public:
 	}
 	bool empty() const { return the_data.empty(); }
 	int size() const { return the_data.size(); }
-	const employee& top() const { return the_data.front(); } //Not too sure if I need a * by Employee
+	employee& top() { return the_data.front(); } //Not too sure if I need a * by Employee
 
 	
 

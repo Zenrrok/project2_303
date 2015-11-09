@@ -6,6 +6,8 @@
 employee::employee()
 {
   name = "";
+  retainingTime = 0;
+  waitingTime = 0;
 }
 void employee::setName(string a)
 {

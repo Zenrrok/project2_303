@@ -27,6 +27,7 @@ public:
 	Date getCircEnd();
 	employee getEmployee();
 	bool checkArchived();
+	int totalDaysRetained();
 
 private:
 	string name;

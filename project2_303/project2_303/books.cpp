@@ -61,4 +61,10 @@ bool book::checkArchived()
 {
 	return archived;
 }
+
+int book::totalDaysRetained(){
+	int y = daysApart(circStart, circEnd);
+	plannedEmployeeQ.top().setRetainingTime(y);
+}
+
 #endif
