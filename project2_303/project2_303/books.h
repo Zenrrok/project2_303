@@ -1,6 +1,7 @@
 #pragma once
 #include "date.h" //I'm just assuming
 #include "employee.h"
+#include "library_queue.h"
 #include <queue>
 using namespace std;
 
@@ -29,6 +30,6 @@ private:
 	date circStart;
 	date circEnd;
 	bool archived;
-	queue<employee> plannedEmployeeQ;
+	library_queue<*employee> plannedEmployeeQ;
 	
 };
