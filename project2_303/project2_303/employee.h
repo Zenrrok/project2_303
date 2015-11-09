@@ -15,8 +15,8 @@ public:
 
 	//getters
 	string getName();
-	Date getWaitingTime();
-	Date getRetainingTime();
+	int getWaitingTime();
+	int getRetainingTime();
 	int getPriority();
 
 private:
