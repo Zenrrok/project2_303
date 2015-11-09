@@ -9,6 +9,7 @@
 #include <locale>
 #include "StringTokenizer.h"
 #include <sstream>
+#include <string>
 #include <iomanip>
 using namespace std;
 /* class Date wirtten by Mohammad Kuhail

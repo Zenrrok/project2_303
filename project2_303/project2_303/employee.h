@@ -10,18 +10,18 @@ public:
 	employee();
 	//setters
 	void setName(string a);
-	void setWaitingTime(date b);
-	void setRetainingTime(date c);
+	void setWaitingTime(Date b);
+	void setRetainingTime(Date c);
 
 	//getters
 	string getName();
-	date getWaitingTime();
-	date getRetainingTime();
+	Date getWaitingTime();
+	Date getRetainingTime();
 	int getPriority();
 
 private:
 	string name;
-	date waitingTime;
-	date retainingTime;
+	Date waitingTime;
+	Date retainingTime;
 	
 };

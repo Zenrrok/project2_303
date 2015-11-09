@@ -12,23 +12,23 @@ public:
 	book();
 	//setters
 	void setName(string a);
-	void setCircStart(date b);
-	void setCircEnd(date c);
+	void setCircStart(Date b);
+	void setCircEnd(Date c);
 	void addEmployee(string d);
 	void removeEmployee();
 	void isArchived();
 
 	//getters
 	string getName();
-	date getCircStart();
-	date getCircEnd();
+	Date getCircStart();
+	Date getCircEnd();
 	employee getEmployee();
 	bool checkArchived();
 
 private:
 	string name;
-	date circStart;
-	date circEnd;
+	Date circStart;
+	Date circEnd;
 	bool archived;
 	library_queue<employee*> plannedEmployeeQ;
 	
