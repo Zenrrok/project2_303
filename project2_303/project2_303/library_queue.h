@@ -1,13 +1,13 @@
 #include <vector>
 #include <functional>
-#include "Employee.h"
+#include "employee.h"
 
 
 
 class library_queue {
 public:
 	library_queue() {}
-	void push(const Employee item); // Not too sure if I need a * here
+	void push(const employee item); // Not too sure if I need a * here
 	void pop()
 	{
 		int max = 0;
@@ -23,14 +23,14 @@ public:
 	}
 	bool empty() const { return the_data.empty(); }
 	int size() const { return the_data.size(); }
-	const Employee& top() const { return the_data.front(); } //Not too sure if I need a * by Employee
+	const employee& top() const { return the_data.front(); } //Not too sure if I need a * by Employee
 
 	
 
 
 
 private:
-	vector<Employee*> the_data; //Has to be a vector of pointers to Employee objects so that
+	vector<employee*> the_data; //Has to be a vector of pointers to Employee objects so that
 	                            // when an employee is edited in One Book, it is the same for the other Books 
 
 };
