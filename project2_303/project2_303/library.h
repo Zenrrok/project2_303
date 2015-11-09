@@ -12,8 +12,8 @@ public:
 
 	void addBook(string a);
 	void addEmployee(string b);
-	void circulateBook(string t, date c);
-	void passOn(string ti, date d);
+	void circulateBook(string t, Date c);
+	void passOn(string ti, Date d);
 
 private:
 	string title;
