@@ -15,12 +15,12 @@ void Library::addBook(string a)
 }
 void Library::addEmployee(string b)
 {
-	for (iterator <List> iter = booksToBeCirc.begin(), iter < booksToBeCirc.end(), iter++)
+	for (iterator <list> iter = booksToBeCirc.begin(), iter < booksToBeCirc.end(), iter++)
 	{
 	  iter->addEmployee(b);
 	}
 }
-void Library::circulateBook(string t, date c)
+void Library::circulateBook(string t, Date c)
 {
 	/*
 	The string is the title of the book.
@@ -28,7 +28,7 @@ void Library::circulateBook(string t, date c)
 	The date is the circulation start date. This will be updated using setCircStart function.
 	*/
 }
-void Library::passOn(string ti, date d)
+void Library::passOn(string ti, Date d)
 {
 	/* 
 	The date received is the circulation end date, the date to pass on. The string is the title of the book.
