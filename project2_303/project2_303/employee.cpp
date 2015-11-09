@@ -25,11 +25,11 @@ string employee::getName()
 {
 	return name;
 }
-Date employee::getWaitingTime()
+int employee::getWaitingTime()
 {
 	return waitingTime;
 }
-Date employee::getRetainingTime()
+int employee::getRetainingTime()
 {
 	return retainingTime;
 }
