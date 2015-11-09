@@ -11,11 +11,11 @@ void employee::setName(string a)
 {
 	name = a;
 }
-void employee::setWaitingTime(date b)
+void employee::setWaitingTime(Date b)
 {
 	waitingTime = b;
 }
-void employee::setRetainingTime(date c)
+void employee::setRetainingTime(Date c)
 {
 	retainingTime = c;
 }
@@ -25,11 +25,11 @@ string employee::getName()
 {
 	return name;
 }
-date employee::getWaitingTime()
+Date employee::getWaitingTime()
 {
 	return waitingTime;
 }
-date employee::getRetainingTime()
+Date employee::getRetainingTime()
 {
 	return retainingTime;
 }
