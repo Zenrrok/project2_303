@@ -30,6 +30,6 @@ private:
 	date circStart;
 	date circEnd;
 	bool archived;
-	library_queue<*employee> plannedEmployeeQ;
+	library_queue<employee*> plannedEmployeeQ;
 	
 };
