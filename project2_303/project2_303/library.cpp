@@ -15,7 +15,7 @@ void Library::addBook(string a)
 }
 void Library::addEmployee(string b)
 {
-	for (iterator <list> iter = booksToBeCirc.begin(), iter < booksToBeCirc.end(), iter++)
+	for (list<book>::iterator iter = booksToBeCirc.begin(); iter != booksToBeCirc.end(); iter++)
 	{
 	  iter->addEmployee(b);
 	}
@@ -27,6 +27,7 @@ void Library::circulateBook(string t, Date c)
 	This will be used to find the book in the books to be circulated queue by using the getName() function. 
 	The date is the circulation start date. This will be updated using setCircStart function.
 	*/
+
 }
 void Library::passOn(string ti, Date d)
 {

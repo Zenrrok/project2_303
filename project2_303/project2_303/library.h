@@ -1,6 +1,7 @@
 #pragma once
 #include "books.h" //I'm just assuming
 #include "date.h"
+#include <list>
 
 using namespace std;
 
@@ -18,7 +19,7 @@ public:
 private:
 	string title;
 	Date dateToPassBook;
-	list <Book> booksToBeCirc;
-  	list <Book> archivedBooks;
+	list <book> booksToBeCirc;
+  	list <book> archivedBooks;
 	
 };

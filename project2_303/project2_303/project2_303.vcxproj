@@ -65,8 +65,10 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="books.h" />
+    <ClInclude Include="date.h" />
     <ClInclude Include="employee.h" />
     <ClInclude Include="library.h" />
+    <ClInclude Include="library_queue.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="books.cpp" />
