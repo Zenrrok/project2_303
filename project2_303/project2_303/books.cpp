@@ -15,11 +15,11 @@ void book::setName(string a)
 {
 	name = a;
 }
-void book::setCircStart(date b)
+void book::setCircStart(Date b)
 {
 	circStart = b;
 }
-void book::setCircEnd(date c)
+void book::setCircEnd(Date c)
 {
 	circEnd = c;
 }
