@@ -10,8 +10,8 @@ public:
 	employee();
 	//setters
 	void setName(string a);
-	void setWaitingTime(Date b);
-	void setRetainingTime(Date c);
+	void setWaitingTime(int b);
+	void setRetainingTime(int c);
 
 	//getters
 	string getName();

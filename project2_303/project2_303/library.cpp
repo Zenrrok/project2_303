@@ -22,11 +22,15 @@ void Library::addEmployee(string b)
 }
 void Library::circulateBook(string t, Date c)
 {
-	/*
-	The string is the title of the book.
-	This will be used to find the book in the books to be circulated queue by using the getName() function. 
-	The date is the circulation start date. This will be updated using setCircStart function.
-	*/
+	for (list<book>::iterator iter = booksToBeCirc.begin(); iter != booksToBeCirc.end(); iter++)
+	{
+		if (t == iter->getName())
+		{
+			iter->setCircStart(c);
+		}
+		else
+			cout << "Books does not exist" << endl;
+	}
 
 }
 void Library::passOn(string ti, Date d)

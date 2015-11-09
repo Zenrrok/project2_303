@@ -26,7 +26,7 @@ void book::setCircEnd(Date c)
 void book::addEmployee(string d)
 {
 	employee emp1;
-	emp1.setName(d)
+	emp1.setName(d);
 	plannedEmployeeQ.push(emp1);
 }
 void book::RemoveEmployee()
@@ -45,15 +45,15 @@ string book::getName()
 {
 	return name;
 }
-date book::getCircStart()
+Date book::getCircStart()
 {
 	return circStart;
 }
-date book::getCircEnd()
+Date book::getCircEnd()
 {
 	return circEnd;
 }
-employee book::getEmployee();
+employee book::getEmployee()
 {
 	return plannedEmployeeQ.top();
 }

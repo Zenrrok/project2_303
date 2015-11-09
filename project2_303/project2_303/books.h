@@ -17,6 +17,9 @@ public:
 	void addEmployee(string d);
 	void removeEmployee();
 	void isArchived();
+	void RemoveEmployee();
+
+
 
 	//getters
 	string getName();
@@ -30,6 +33,6 @@ private:
 	Date circStart;
 	Date circEnd;
 	bool archived;
-	library_queue<employee*> plannedEmployeeQ;
+	library_queue<employee> plannedEmployeeQ;
 	
 };

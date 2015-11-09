@@ -3,6 +3,7 @@
 #include "employee.h"
 
 
+template<typename Item_Type>
 
 class library_queue {
 public:
