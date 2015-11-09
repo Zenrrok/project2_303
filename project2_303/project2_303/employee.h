@@ -21,7 +21,7 @@ public:
 
 private:
 	string name;
-	Date waitingTime;
-	Date retainingTime;
+	int waitingTime;
+	int retainingTime;
 	
 };
