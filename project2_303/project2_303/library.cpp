@@ -22,10 +22,21 @@ void Library::addEmployee(string b)
 }
 void Library::circulateBook(string t, date c)
 {
-	
+	/*
+	The string is the title of the book.
+	This will be used to find the book in the books to be circulated queue by using the getName() function. 
+	The date is the circulation start date. This will be updated using setCircStart function.
+	*/
 }
 void Library::passOn(string ti, date d)
 {
+	/* 
+	The date received is the circulation end date, the date to pass on. The string is the title of the book.
+	This will be used to find the book in the queue by using the getName() function. 
+	Using the circulation start date and the given circulation end date. 
+	The number of days for the retaining time should be calculated.
+	*/
+	
 	/* 
 	If the employee queue in the book object is on the last employee (it's empty after you pop the current employee).
 	The retaining time for the employee gets adjusted to how many days the employee had the book. 
