@@ -25,10 +25,13 @@ class Date {
 public:
 
 	int daysFromDate(Date startdate, Date enddate) {
-		int daysfromyear = enddate.year - startdate.year;
-		int daysfrommonth = enddate.month - startdate.month;
+		int years = enddate.year - startdate.year;
+		int months = enddate.month - startdate.month;
 		int days = enddate.day - startdate.day;
 
+		int daysfromyear = years * 365;
+		int daysfrommonth = months * 31;
+		
 		int totalDays = daysfromyear + daysfrommonth + days;
 		
 		return totalDays;
