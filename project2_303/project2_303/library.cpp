@@ -27,7 +27,7 @@ void Library::circulateBook(string t, Date c)
 		if (t == iter->getName())
 		{
 			iter->setCircStart(c);
-			iter->setHolder()
+			iter->setHolder();
 		}
 		else
 			cout << "Books does not exist" << endl;

@@ -79,8 +79,8 @@ void book::setEMPWaitingTime(string empName, int time){
 	
 	
 }
-int book::getEMPWaitingTime(){
-
+int book::getEMPWaitingTime(string emp){
+	for ()
 }
 
 void book::setHolder()
