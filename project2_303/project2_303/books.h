@@ -18,6 +18,8 @@ public:
 	void removeEmployee();
 	void isArchived();
 	void RemoveEmployee();
+	void setEMPWaitingTime(string empName, int time);
+	void setHolder();
 
 
 
@@ -28,9 +30,12 @@ public:
 	employee getEmployee();
 	bool checkArchived();
 	int totalDaysRetained();
+	int getEMPWaitingTime(string empName);
+	string getHolder();
 
 private:
 	string name;
+	string holder;
 	Date circStart;
 	Date circEnd;
 	bool archived;

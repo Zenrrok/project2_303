@@ -65,6 +65,32 @@ bool book::checkArchived()
 int book::totalDaysRetained(){
 	int y = daysApart(circStart, circEnd);
 	plannedEmployeeQ.top().setRetainingTime(y);
+	return y;
+}
+
+void book::setEMPWaitingTime(string empName, int time){
+	for (library_queue<employee>::iterator iter = plannedEmployeeQ.begin(); iter != plannedEmployeeQ.end(); iter++)
+	{
+		if (iter->getName() == empName)
+		{
+			iter->setWaitingTime(time);
+		}
+	}
+	
+	
+}
+int book::getEMPWaitingTime(){
+
+}
+
+void book::setHolder()
+{
+	employee temp = plannedEmployeeQ.top();
+	holder = temp.getName();
+}
+string book::getHolder()
+{
+	return holder;
 }
 
 #endif

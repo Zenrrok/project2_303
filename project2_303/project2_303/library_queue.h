@@ -1,4 +1,4 @@
-#include <vector>
+#include <list>
 #include <functional>
 #include "employee.h"
 
@@ -13,8 +13,8 @@ public:
 	}// Not too sure if I need a * here
 	void pop()
 	{
-		vector<employee>::iterator max = the_data.begin();
-		for (vector<employee>::iterator iter = the_data.begin(); iter != the_data.end(); iter++) // iterating through the vector
+		list<employee*>::iterator max = the_data.begin();
+		for (list<employee*>::iterator iter = the_data.begin(); iter != the_data.end(); iter++) // iterating through the vector
 		{	
 
 			if (max->getPriority() < iter->getPriority()) //finding the Employee with the highest priority
@@ -32,13 +32,16 @@ public:
 	int size() const { return the_data.size(); }
 	employee& top() { return the_data.front(); } //Not too sure if I need a * by Employee
 
-	
+	//custom iterators 
+	typedef list<employee>::iterator iterator;
+	iterator begin(){ return the_data.begin(); }
+	iterator end(){ return the_data.end(); }
 
 
 
 private:
-	vector<employee> the_data; //Has to be a vector of pointers to Employee objects so that
-	                            // when an employee is edited in One Book, it is the same for the other Books 
+	list<employee*> the_data; //Has to be a vector of pointers to Employee objects so that
+	                            // when an ployee is edited in One Book, it is the same for the other Books 
 
 };
 

@@ -27,6 +27,7 @@ void Library::circulateBook(string t, Date c)
 		if (t == iter->getName())
 		{
 			iter->setCircStart(c);
+			iter->setHolder()
 		}
 		else
 			cout << "Books does not exist" << endl;
@@ -45,7 +46,10 @@ void Library::passOn(string ti, Date d)
 		if (iter->getName() == ti)
 		{
 			iter->setCircEnd(d);
-			iter->totalDaysRetained();
+			int retainedTime= iter->totalDaysRetained();
+			employee temp = iter->getEmployee();
+			iter->RemoveEmployee();
+			iter->setEMPWaitingTime(iter->)
 
 		}
 	}
