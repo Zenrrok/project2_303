@@ -18,7 +18,11 @@ void Library::addEmployee(string b)
 	for (list<book>::iterator iter = booksToBeCirc.begin(); iter != booksToBeCirc.end(); iter++)
 	{
 	  iter->addEmployee(b);
+	  employee temp;
+	  temp.setName(b);
+	  allEmployees.push_back(temp);
 	}
+	
 }
 void Library::circulateBook(string t, Date c)
 {
@@ -49,8 +53,8 @@ void Library::passOn(string ti, Date d)
 			int retainedTime= iter->totalDaysRetained();
 			employee temp = iter->getEmployee();
 			iter->RemoveEmployee();
-			iter->setEMPWaitingTime(iter->)
-
+			iter->setHolder();
+			iter->setEMPWaitingTime(retainedTime);
 		}
 	}
 

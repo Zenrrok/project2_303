@@ -18,7 +18,7 @@ public:
 	void removeEmployee();
 	void isArchived();
 	void RemoveEmployee();
-	void setEMPWaitingTime(string empName, int time);
+	void setEMPWaitingTime(int time);
 	void setHolder();
 
 
@@ -32,13 +32,15 @@ public:
 	int totalDaysRetained();
 	int getEMPWaitingTime(string empName);
 	string getHolder();
+	string getNxtHolder();
 
 private:
 	string name;
 	string holder;
+	string nxtHolder;
 	Date circStart;
 	Date circEnd;
 	bool archived;
-	library_queue<employee> plannedEmployeeQ;
+	library_queue<employee*> plannedEmployeeQ;
 	
 };

@@ -22,5 +22,6 @@ private:
 	Date dateToPassBook;
 	list <book> booksToBeCirc;
   	list <book> archivedBooks;
+	list<employee> allEmployees;
 	
 };

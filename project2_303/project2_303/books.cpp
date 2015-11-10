@@ -25,8 +25,8 @@ void book::setCircEnd(Date c)
 }
 void book::addEmployee(string d)
 {
-	employee emp1;
-	emp1.setName(d);
+	employee* emp1= new employee;
+	emp1->setName(d);
 	plannedEmployeeQ.push(emp1);
 }
 void book::RemoveEmployee()
@@ -55,7 +55,7 @@ Date book::getCircEnd()
 }
 employee book::getEmployee()
 {
-	return plannedEmployeeQ.top();
+	return *plannedEmployeeQ.top();
 }
 bool book::checkArchived()
 {
@@ -63,34 +63,35 @@ bool book::checkArchived()
 }
 
 int book::totalDaysRetained(){
-	int y = daysApart(circStart, circEnd);
-	plannedEmployeeQ.top().setRetainingTime(y);
-	return y;
+	Date y;
+	int z= y.daysFromDate(circStart, circEnd);
+	employee* temp = plannedEmployeeQ.top();
+	(*temp).setRetainingTime(z);
+	return z;
 }
 
-void book::setEMPWaitingTime(string empName, int time){
-	for (library_queue<employee>::iterator iter = plannedEmployeeQ.begin(); iter != plannedEmployeeQ.end(); iter++)
-	{
-		if (iter->getName() == empName)
-		{
-			iter->setWaitingTime(time);
-		}
-	}
-	
-	
+void book::setEMPWaitingTime(int time){
+	employee temp = *plannedEmployeeQ.top();
+	temp.setWaitingTime(time);
 }
 int book::getEMPWaitingTime(string emp){
-	for ()
+	employee* temp = plannedEmployeeQ.top();
+	return (*temp).getWaitingTime();
 }
 
 void book::setHolder()
 {
-	employee temp = plannedEmployeeQ.top();
-	holder = temp.getName();
+	employee* temp;
+	temp= plannedEmployeeQ.top();
+	holder = (*temp).getName();
 }
 string book::getHolder()
 {
 	return holder;
+}
+
+string book::getNxtHolder(){
+	return nxtHolder;
 }
 
 #endif
