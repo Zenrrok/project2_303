@@ -24,6 +24,17 @@ class Date {
 
 public:
 
+	int daysFromDate(Date startdate, Date enddate) {
+		int daysfromyear = enddate.year - startdate.year;
+		int daysfrommonth = enddate.month - startdate.month;
+		int days = enddate.day - startdate.day;
+
+		int totalDays = daysfromyear + daysfrommonth + days;
+		
+		return totalDays;
+	}
+
+
 	Date(DateFormat format = DateFormat::US) :format(format){}
 
 	
