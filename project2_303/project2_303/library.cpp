@@ -38,6 +38,7 @@ void Library::circulateBook(string t, Date c)
 	}
 
 }
+
 void Library::passOn(string ti, Date d)
 {
 	/* 
@@ -49,14 +50,29 @@ void Library::passOn(string ti, Date d)
 	for (list<book>::iterator iter = booksToBeCirc.begin(); iter != booksToBeCirc.end(); iter++){
 		if (iter->getName() == ti)
 		{
-			iter->setCircEnd(d);
-			int retainedTime= iter->totalDaysRetained();
-			employee temp = iter->getEmployee();
-			iter->RemoveEmployee();
-			iter->setHolder();
-			iter->setEMPWaitingTime(retainedTime);
+			if (!iter->isEmpty())
+			{
+				iter->setCircEnd(d);
+				int retainedTime = iter->totalDaysRetained();
+				employee temp = iter->getEmployee();
+				temp.setWaitingTime(iter->getEMPWaitingTime(iter->getName()));
+				iter->RemoveEmployee();
+				iter->setHolder();
+				iter->setEMPWaitingTime(retainedTime,temp.getWaitingTime());
+			}
+			else
+			{
+				archiveBook(iter->getName());
+			}
+			
+		}
+		else
+		{
+			cout << "Book doesn't exist" << endl;
 		}
 	}
+
+
 
 	
 	/* 
@@ -64,6 +80,7 @@ void Library::passOn(string ti, Date d)
 	The retaining time for the employee gets adjusted to how many days the employee had the book. 
 	Then the employee is popped from the queue.
 	Then the book is placed in the archived book queue and popped from the books to be circulated queue. */
+	
 	
 	/* 
 	If it is not the last employee in the queue.
@@ -74,4 +91,17 @@ void Library::passOn(string ti, Date d)
 	*/
 }
 
+void Library::archiveBook(string bookName)
+{
+	for (list<book>::iterator iter = booksToBeCirc.begin(); iter != booksToBeCirc.end(); iter++)
+	{
+		if (iter->getName() == bookName)
+		{
+			book temp;
+			temp.setName(iter->getName());
+			booksToBeCirc.remove(*iter);
+			archivedBooks.push_back(temp);
+		}
+	}
+}
 #endif

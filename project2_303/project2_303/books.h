@@ -18,8 +18,9 @@ public:
 	void removeEmployee();
 	void isArchived();
 	void RemoveEmployee();
-	void setEMPWaitingTime(int time);
+	void setEMPWaitingTime(int time, int retainingTime);
 	void setHolder();
+	
 
 
 
@@ -33,6 +34,7 @@ public:
 	int getEMPWaitingTime(string empName);
 	string getHolder();
 	string getNxtHolder();
+	bool isEmpty();
 
 private:
 	string name;

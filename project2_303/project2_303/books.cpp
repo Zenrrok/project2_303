@@ -70,7 +70,7 @@ int book::totalDaysRetained(){
 	return z;
 }
 
-void book::setEMPWaitingTime(int time){
+void book::setEMPWaitingTime(int time, int retainingTime){
 	employee temp = *plannedEmployeeQ.top();
 	temp.setWaitingTime(time);
 }
@@ -93,5 +93,17 @@ string book::getHolder()
 string book::getNxtHolder(){
 	return nxtHolder;
 }
+
+bool book::isEmpty()
+{
+	if (!plannedEmployeeQ.empty())
+	{
+		return false;
+	}
+	else
+		return true;
+}
+
+
 
 #endif

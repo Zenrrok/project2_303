@@ -25,7 +25,6 @@ public:
 			{
 				max = iter;
 				iter++;
-				(*iter)->setWaitingTime((*max)->getRetainingTime() + (*max)->getWaitingTime());
 			}
 		}
 		 
